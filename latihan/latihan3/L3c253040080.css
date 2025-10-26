@@ -1,0 +1,45 @@
+body {
+    background-color: aqua;
+    font-family: Georgia;
+}
+h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 60px;
+    color: darkblue;
+    text-align: center;
+}
+.dokdondie {
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+h3 +p {
+   text-align: center;
+   color: orange;
+}
+h4 {
+    text-align: right;
+    font-style: italic;
+}
+p + p{
+    text-align: right;
+    line-height: 30px;
+}
+
+.dokdondie:hover {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mark {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mark:hover {
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+}
