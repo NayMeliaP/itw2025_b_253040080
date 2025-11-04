@@ -1,0 +1,288 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*style*/
+
+body {
+  font: 14px/24px minecraft, sans-serif;
+  background-color: #000000;
+  background-image: url(img/Mine\ craft\ __\ _3.jpeg);
+  color: #ffffff;
+  text-align: justify;
+  text-shadow: #333333 1px 1px 2px;
+  letter-spacing: 2px;
+  
+}
+.container {
+  width: 800px;
+  margin: auto;
+  background-color:rgba(0, 0, 0, 0.8);
+}
+
+.header {
+  padding: 20px;
+}
+
+.header .judul {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 45px;
+}
+
+.header ul li {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.header a {
+  text-decoration: none;
+  color: rgb(252, 150, 167);
+  padding: 3px;
+}
+
+.header a:hover {
+  background-color: rgb(254, 158, 188);
+  color: white;
+}
+
+.hero {
+  background-image: url(img/scn.jpg);
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-top: 5px solid rgb(255, 203, 224);
+  border-bottom: 5px solid rgb(255, 203, 224);
+  filter: grayscale(200%);
+  transition: filter 1s ease;
+}
+
+.hero:hover {
+  filter: grayscale(0%);
+}
+
+.content {
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 48px;
+  color: rgb(252, 150, 167);
+  text-shadow: #fffdfd 1px 1px 1px;
+}
+
+.content .penulis {
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.content .penulis a {
+  color:rgb(237, 75, 102);
+  text-decoration: none;
+}
+
+.content .penulis a:hover {
+  text-decoration: underline;
+}
+
+
+.content .pembuka a {
+  color:rgb(255, 180, 184);
+  text-decoration: none;
+}
+
+.content .pembuka a:hover {
+  text-decoration: underline;
+}
+
+.content p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.footer {
+  background-color: #333;
+  padding: 10px;
+}
+
+.footer .copy {
+  color: #eaeaea;
+  text-align: center;
+  font-size: 12px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  color: rgb(254, 158, 188);
+}
+
+div.rintaro {
+  background-image: url(img/rintaro.jpeg);
+  height: 300px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+div.waguri {
+  background-image: url(img/download\ \(3\).jpeg);
+  height: 300px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.copy a {
+  color: rgb(244, 214, 219);
+  text-decoration: none;
+}
+
+.copy a:hover {
+  text-decoration: underline;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.content .avv a {
+  color: rgb(255, 180, 184);
+  text-decoration: none;
+} 
+
+.content .avv a:hover {
+  text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'minecraft';
+    src: url('img/Minecraft.ttf') format('truetype');
+}
