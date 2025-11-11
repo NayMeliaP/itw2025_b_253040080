@@ -1,0 +1,151 @@
+body {
+    font-family: 'minecraft', sans-serif;
+    background-color: rgb(90, 90, 90);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@font-face {
+    font-family:'minecraft';
+    src: url('img/Minecraft.ttf') format('truetype');
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgb(0,0,0,0.5)50%, rgb(0,0,0,0.5)50%);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 62.5%;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+header{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2px 9%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap
+    gap: 1rem;
+    list-style: none; 
+}
+
+.navbar a {
+    color: #ffffff;
+    flex-basis: 4.5 rem;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 15px;
+    transition: background 0.5s ease, transform 0.5s ease;
+}
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 18px;
+}
+.logo {
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.btn {
+    color: #fff;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: 19px;
+    transition: background 0.5s ease, transform 0.5s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: scale(1.2);
+    font-size: 20px;
+}
+
+
+.opening {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 50px;
+    float: none
+}
+video {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h1 {
+    display: inline-block;
+    position: relative;
+    top: 200px;
+    left: 40x;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.h1 span:nth-child(1) {
+    animation-delay: 0.0s;
+}
+
+
+
+p {
+    position: relative;
+    top: 230px;
+    left: 40x;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    line-height:10x
+}
+
