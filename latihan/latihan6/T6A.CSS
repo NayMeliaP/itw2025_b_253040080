@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bolder;
+}
+
+header .logo span {
+  color: #b92525;
+}
+
+header .navbar a {
+  font-size: 1.5rem;
+  padding: 0 1.5rem;
+  color: #666;
+}
+
+header .navbar a:hover {
+  color: pink;
+}
+
+header .icon a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #333;
+  font-weight: bolder;
+}
+
+header .icon a:hover {
+  color: pink;
+}
+
+.tole {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 30px;
+  position: relative;
+  z-index: 3;
+}
+
+header input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.tole span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.tole span:nth-child(2) {
+  /* Add valid CSS properties here or remove this block if not needed */
+}
+
+@media (max-width: 10000px) {
+  header .tole {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  header .tole {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgb(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header #tolee:checked ~ .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 0.1rem solid rgb(0, 0, 0, 0.1);
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+}
