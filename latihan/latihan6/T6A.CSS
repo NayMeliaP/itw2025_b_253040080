@@ -18,6 +18,7 @@ html {
 }
 
 header {
+  background-color: rgba(0, 0, 0, 0.712);
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +33,7 @@ header {
 
 header .logo {
   font-size: 2.5rem;
-  color: #333;
+  color: #eaeaea;
   font-weight: bolder;
 }
 
@@ -43,31 +44,36 @@ header .logo span {
 header .navbar a {
   font-size: 1.5rem;
   padding: 0 1.5rem;
-  color: #666;
+  color: #cacaca;
 }
 
 header .navbar a:hover {
-  color: pink;
+  color: rgb(246, 161, 161);
+  text-shadow: 0 0 4px rgba(255, 182, 193, 0.6),
+    0 0 10px rgba(255, 105, 180, 0.4), 0 0 18px rgba(255, 105, 180, 0.25);
 }
 
 header .icon a {
   font-size: 2rem;
   padding: 0 1.5rem;
-  color: #333;
+  color: #e8e5e5;
   font-weight: bolder;
+  transition: 0.3s;
 }
 
 header .icon a:hover {
   color: pink;
+  text-shadow: 0 0 4px rgba(255, 182, 193, 0.6),
+    0 0 10px rgba(255, 105, 180, 0.4), 0 0 18px rgba(255, 105, 180, 0.25);
 }
 
 .tole {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
   width: 30px;
   position: relative;
-  z-index: 3;
+  z-index: 9;
 }
 
 header input {
@@ -76,19 +82,16 @@ header input {
   height: 28px;
   opacity: 0;
   cursor: pointer;
-  z-index: 4;
+  z-index: 10;
 }
 
 .tole span {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #333;
+  background-color: #d7d6d6;
   border-radius: 2px;
-}
-
-.tole span:nth-child(2) {
-  /* Add valid CSS properties here or remove this block if not needed */
+  transition: all 0.5s ease;
 }
 
 @media (max-width: 10000px) {
@@ -107,9 +110,445 @@ header input {
   }
 }
 
-@media (max-width: 620px) {
+.tole span:nth-child(1) {
+  transform-origin: 0 0;
+}
+
+.tole span:nth-child(3) {
+  transform-origin: 0 100%;
+}
+
+header #tolee:checked ~ .tole span:nth-child(1) {
+  transform: rotate(45deg) translate(0px, -3px);
+}
+
+header #tolee:checked ~ .tole span:nth-child(3) {
+  transform: rotate(-45deg) translate(0px, 3px);
+}
+
+header #tolee:checked ~ .tole span:nth-child(2) {
+  transform: scale(0);
+}
+
+.opening {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
+  font-size: 50px;
+  float: none;
+}
+.meh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 150px;
+  left: 40x;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px #782948;
+  text-align: center;
+  animation: 1s ease infinite;
+}
+
+.imeh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 190px;
+  flex-wrap: wrap;
+}
+
+.mi {
+  margin: 21px;
+}
+
+.imeh img {
+  width: 135px;
+  box-shadow: 0 0 20px 2px #474747;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.imeh img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+  box-shadow: 0 0 4px rgba(255, 182, 193, 0.6),
+    0 0 10px rgba(255, 105, 180, 0.4), 0 0 18px rgba(255, 105, 180, 0.25);
+}
+
+.content {
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #00000089;
+  text-align: justify;
+  margin-top: 70px;
+}
+
+.content h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 48px;
+  color: rgb(255, 255, 255);
+  text-shadow: #aba9a9 1px 1px 1px;
+  text-shadow: 0 0 4px rgba(255, 182, 193, 0.6),
+    0 0 10px rgba(255, 105, 180, 0.4), 0 0 18px rgba(255, 105, 180, 0.25);
+}
+
+.content .penulis {
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.content .penulis a {
+  color: rgb(237, 75, 102);
+  text-decoration: none;
+}
+
+.content .penulis a:hover {
+  text-decoration: underline;
+}
+
+.content .pembuka a {
+  color: rgb(255, 166, 181);
+  text-decoration: none;
+}
+
+.content .pembuka a:hover {
+  text-decoration: underline;
+}
+
+.content p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.video-container video {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.kedua {
+  margin: -10px 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: #00000089;
+  text-align: justify;
+  margin-top: -20px;
+}
+
+h2 {
+  font-size: 25px;
+  color: #fff;
+  text-shadow: 2px 2px 6px #000000;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 4px rgba(255, 182, 193, 0.6),
+    0 0 10px rgba(255, 105, 180, 0.4), 0 0 18px rgba(255, 105, 180, 0.25);
+}
+
+.puteh p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: justify;
+  color: #fff;
+}
+
+.puteh a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(255, 182, 193, 0.6),
+    0 0 10px rgba(255, 105, 180, 0.4), 0 0 18px rgba(255, 105, 180, 0.25);
+}
+
+.puteh .poto {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px 25px;
+  background-color: rgb(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gal li {
+  margin: 10px 36px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid #fa75be6f;
+  box-shadow: 0 0 10px rgba(255, 169, 239, 0.6);
+  position: relative;
+}
+
+.poto .gal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gal li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: circle(50%);
+}
+
+.gal li span {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0) rotate(0deg);
+  transition: 0.3s ease;
+}
+
+.gal li:hover span {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+}
+
+.gal img {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  z-index: 8;
+  transition: 0.8s;
+  text-align: center;
+}
+
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+.overlay img {
+  margin-top: 20px;
+  max-width: 80%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.overlay:target img {
+  animation: hu 1s;
+}
+
+.overlay .close {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  margin-left: -20px;
+  background-color: rgba(41, 41, 41, 0.5);
+}
+
+.overlay:target .close {
+  display: block;
+  animation: slide 1s;
+}
+
+.overlay .prev {
+  display: none;
+  position: absolute;
+  top: 52%;
+  left: 120px;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 180px;
+  background-image: url(img/img/kur/pani.png);
+  background-size: contain;
+  background-position: right;
+  text-indent: -9999px;
+  z-index: 10000;
+}
+
+.overlay:target .prev {
+  display: block;
+  animation: hu 1s;
+}
+
+.overlay .next {
+  display: none;
+  position: absolute;
+  top: 52%;
+  right: 120px;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 180px;
+  background-image: url(img/img/kur/panaa.png);
+  background-size: contain;
+  background-position: right;
+  text-indent: -9999px;
+  z-index: 10000;
+}
+
+.overlay:target .next {
+  display: block;
+  animation: hu 1s;
+}
+
+.overlay .prev {
+  display: none;
+  position: absolute;
+  top: 52%;
+  left: 120px;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 180px;
+  background-image: url(img/img/kur/pani.png);
+  background-size: contain;
+  background-position: right;
+  text-indent: -9999px;
+  z-index: 10000;
+}
+
+.overlay:target .prev {
+  display: block;
+}
+
+.contact {
+  margin: 0px 40px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name,
+.email,
+.message {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 80%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  border-bottom: 1px solid;
+  color: pink;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.contact button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bolder;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: pink;
+  color: white;
+  box-shadow: 0 0 4px rgba(255, 182, 193, 0.6),
+    0 0 10px rgba(255, 105, 180, 0.4), 0 0 18px rgba(255, 105, 180, 0.25);
+}
+
+@keyframes hu {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes zoomDanFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 30px 5%;
+    margin-top: 60px;
+  }
+
+  .about h2 {
+    font-size: 28px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 670px) {
   header .tole {
-    display: block;
+    display: flex;
   }
 
   header .navbar {
@@ -117,7 +556,7 @@ header input {
     top: 100%;
     left: 0;
     right: 0;
-    background: #eee;
+    background: #111111b5;
     border-top: 0.1rem solid rgb(0, 0, 0, 0.1);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
@@ -129,9 +568,44 @@ header input {
   header .navbar a {
     margin: 1.5rem;
     padding: 1.5rem;
-    background: #fff;
+    background: #000000b5;
     border: 0.1rem solid rgb(0, 0, 0, 0.1);
     display: block;
+  }
+
+  .overlay .close {
+    top: 180px;
+  }
+
+  .overlay .next {
+    display: none;
+    position: absolute;
+    top: 52%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 120px;
+  }
+  .overlay .prev {
+    display: none;
+    position: absolute;
+    top: 52%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 120px;
+  }
+
+  .name,
+  .email {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container video {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
