@@ -1,0 +1,181 @@
+body {
+  background-color: #92c1ef;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.navbar .nav-link :hover {
+  color: rgb(81, 137, 156);
+}
+
+.isinya {
+  text-shadow: 2px 2px 4px rgba(3, 48, 67, 1);
+  text-align: center;
+}
+
+.judulnya {
+  text-shadow: 2px 2px 4px rgba(3, 48, 67, 1);
+  text-align: center;
+  margin-top: -80px;
+}
+
+.navbar-brand,
+.nav-link {
+  transition: 0.3s ease;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  text-shadow: 2px 2px 6px rgba(23, 216, 234, 0.9);
+  color: #ffffff;
+}
+
+.wrapper {
+  overflow: hidden;
+  background: #000;
+}
+
+.boxes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.7;
+  pointer-events: none;
+  animation: moveParticle linear forwards;
+}
+
+@keyframes moveParticle {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px) scale(0.5); /* bergerak ke bawah */
+    opacity: 0;
+  }
+}
+
+svg {
+  display: block;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.iniisi {
+  margin: 0 15% 0 15%;
+}
+
+.card {
+  width: 22rem;
+  background-color: #7ebcff;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 1px 1px rgba(72, 78, 85, 0.6);
+  height: 550px;
+}
+.card img {
+  border-radius: 20px 20px 0 0;
+}
+.card:hover {
+  background-color: #5baaf9;
+  color: #000;
+  box-shadow: 0 20px 40px rgba(72, 78, 85, 0.6);
+  transform: translateY(-15px);
+}
+
+.form-area {
+  padding-top: 7%;
+}
+.row.single-form {
+  box-shadow: 0 2px 20px -5px rgba(0, 0, 0, 0.5);
+}
+.left {
+  background: rgb(108, 161, 241);
+  padding: 200px 98px;
+}
+.left h2 {
+  font-family: poppins;
+  color: #022e61;
+  font-weight: 700;
+  font-size: 48px;
+}
+.left h2 span {
+  font-weight: 100;
+}
+.single-form {
+  background: #fff;
+}
+.right {
+  padding: 70px 100px;
+  position: relative;
+}
+.right i {
+  position: absolute;
+  font-size: 80px;
+  left: -27px;
+  top: 40%;
+  color: #fff;
+}
+.form-control {
+  border: 2px solid #000;
+}
+
+.form-label {
+  color: #011f50;
+}
+.right button {
+  border: none;
+  border-radius: 0;
+  background: #83aafc;
+  border-radius: 2px 2px;
+  width: 180px;
+  color: #ffffff;
+  padding: 15px 0;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.right button:hover {
+  background-color: #252525;
+}
+
+footer {
+  background-color: #011f50;
+  color: #ffffff;
+  margin-top: 20px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 986px) {
+  .judulnya {
+    margin-top: -20px;
+  }
+
+  .inikotak {
+    margin-top: 30px !important;
+  }
+}
